@@ -10,7 +10,6 @@ import { IoCartOutline } from "react-icons/io5"
 import { FiUser } from "react-icons/fi"
 
 import { NavLink } from '../types/types'
-import { log } from 'console'
 
 const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Home' },
@@ -21,7 +20,7 @@ const NAV_LINKS: NavLink[] = [
 
 const logo: StaticImageData = logoB
 
-const Header = (): JSX.Element => {
+const Header = () => {
 
   const [open, setOpen] = useState<boolean>(false)
   const [search, setSearch] = useState<string>('')
