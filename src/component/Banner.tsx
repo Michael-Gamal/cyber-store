@@ -8,7 +8,7 @@ import fullAppVision from '../../public/Image/appvision.png'
 import fullMacBook from '../../public/Image/MacBook.png'
 import fullPlayStation from '../../public/Image/PlayStation.png'
 
-import ResponsiveImage from './responsiveImage'
+import ResponsiveImage from './ResponsiveImage'
 
 const Banner = () => {
 
