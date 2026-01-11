@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import halfAirpods from '../../public/Image/half-airpods.png'
 import halfAppVision from '../../public/Image/half-appvision.png'
 import halfMacBook from '../../public/Image/half-MacBook.png'
@@ -9,44 +8,19 @@ import fullAppVision from '../../public/Image/appvision.png'
 import fullMacBook from '../../public/Image/MacBook.png'
 import fullPlayStation from '../../public/Image/PlayStation.png'
 
-import ResponsiveImage from './ResponsiveImage.tsx'
+import ResponsiveImage from './responsiveImage'
 
 const Banner = () => {
-
-
-
 
   return (
     <section className="flex flex-col lg:flex-row ">
       <div className="flex flex-col lg:flex-1 ">
         <div className="flex flex-col lg:flex-row bg-white order-2 lg:order-1 py-4 lg:py-0">
-            {/* <div className="hidden lg:flex ">
-                <Image 
-                    src={halfPlayStation}
-                    width={halfPlayStation.width}
-                    height={halfPlayStation.height}
-                    alt="Playstation 5"
-                    className=''
-                />
-            </div>
-
-            <div className="lg:hidden flex justify-center items-center ">
-                <Image 
-                    src={fullPlayStation}
-                    width={fullPlayStation.width}
-                    height={fullPlayStation.height}
-                    alt="Playstation 5"
-                    className=''
-                />
-            </div> */}
-
             <ResponsiveImage
                 desktop={halfPlayStation}
                 mobile={fullPlayStation}
                 alt="Playstation 5 banner"
-                
             />
-
             <div className="flex flex-col text-center lg:text-start  justify-center lg:flex-1 ">
                 <h2 className='text-3xl lg:text-5xl font-medium lg:mb-4 mt-4 lg:mt-0 mb-3'>Playstation 5</h2>
                 <p className='text-[#909090] text-base lg:max-w-sm  '>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</p>
@@ -54,44 +28,22 @@ const Banner = () => {
         </div>
         <div className="flex flex-col lg:flex-row">
             <div className="bg-[#EDEDED] flex flex-1 flex-col lg:flex-row py-[40px] lg:py-0 ">
-                <div className="hidden lg:flex">
-                    <Image 
-                        src={halfAirpods}
-                        width={halfAirpods.width}
-                        height={halfAirpods.height}
-                        alt="Apple Vision Pro"
-                    />
-                </div>
-                <div className="lg:hidden flex justify-center items-center">
-                    <Image 
-                        src={fullAirpods}
-                        width={fullAirpods.width}
-                        height={fullAirpods.height}
-                        alt="Apple AirPods Max"
-                    />
-                </div>
+            <ResponsiveImage
+                desktop={halfAirpods}
+                mobile={fullAirpods}
+                alt="Apple AirPods Max banner"
+            />
                 <div className="leading-7 flex justify-center flex-col m-auto text-center lg:text-start mt-2 ">
                     <h2 className='text-3xl '>Apple <br className='hidden lg:flex' /> AirPods <br className='hidden lg:flex' /> <span className='font-medium'> Max</span></h2>
                     <p className='text-[#909090]'>Computational audio. <br className='hidden lg:flex' /> Listen, it is powerful</p>
                 </div>
             </div>
             <div className="bg-[#353535] leading-7 flex flex-col lg:flex-row items-center flex-1 py-[40px] lg:py-0 ">
-                <div className="hidden lg:flex">
-                    <Image 
-                        src={halfAppVision}
-                        width={halfAppVision.width}
-                        height={halfAppVision.height}
-                        alt="Apple Vision Pro"
-                    />
-                </div>
-                <div className="lg:hidden flex justify-center items-center">
-                    <Image 
-                        src={fullAppVision}
-                        width={fullAppVision.width}
-                        height={fullAppVision.height}
-                        alt="Apple Vision Pro"
-                    />
-                </div>
+            <ResponsiveImage
+                desktop={halfAppVision}
+                mobile={fullAppVision}
+                alt="Apple Vision Pro banner"
+            />
                 <div className="leading-7 flex justify-center  flex-col m-auto text-center lg:text-start ">
                     <h2 className='text-3xl text-white '>Apple <br className='hidden lg:flex' /> Vision  <br className='hidden lg:flex' /> <span className='font-medium'> Pro</span></h2>
                     <p className='text-[#909090]'>An immersive way to <br className='hidden lg:flex' /> experience <br /> entertainment</p>
@@ -110,22 +62,11 @@ const Banner = () => {
                 </button>
         </div>  
         <div className="order-1 lg:order-2">
-            <div className="hidden lg:flex">
-                <Image 
-                    src={halfMacBook}
-                    width={halfMacBook.width}
-                    height={halfMacBook.height}
-                    alt='Mac Book Air'
-                />
-            </div>
-            <div className="lg:hidden">
-                <Image 
-                    src={fullMacBook}
-                    width={fullMacBook.width}
-                    height={fullMacBook.height}
-                    alt='Mac Book Air'
-                />
-            </div>
+            <ResponsiveImage
+                desktop={halfMacBook}
+                mobile={fullMacBook}
+                alt="MacBook Air banner"
+            />
         </div>
       </div>
     </section>
